@@ -65,6 +65,7 @@ public class Video : LibraryItem
         Console.WriteLine(" Playtime: {0}\n", playTime);
     }
 }
+
 /// <summary>
 /// The 'Decorator' abstract class
 /// </summary>
@@ -83,6 +84,7 @@ public abstract class Decorator : LibraryItem
         libraryItem.Display();
     }
 }
+
 /// <summary>
 /// The 'ConcreteDecorator' class
 /// </summary>
