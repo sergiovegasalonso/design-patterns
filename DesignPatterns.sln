@@ -5,7 +5,11 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flyweight", "Flyweight", "{B067EDDF-28A4-4FD5-B330-1D007E852B0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{9B80E217-5585-46A8-A07C-6E48C0A53159}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "Flyweight\Flyweight.csproj", "{9B80E217-5585-46A8-A07C-6E48C0A53159}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbstractFactory", "AbstractFactory", "{5F377FD5-39C1-40F5-A5DD-F23390996BDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{248B3A8B-6339-48D9-ABAD-1E100566F7B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{9B80E217-5585-46A8-A07C-6E48C0A53159}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B80E217-5585-46A8-A07C-6E48C0A53159}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B80E217-5585-46A8-A07C-6E48C0A53159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{248B3A8B-6339-48D9-ABAD-1E100566F7B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{248B3A8B-6339-48D9-ABAD-1E100566F7B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{248B3A8B-6339-48D9-ABAD-1E100566F7B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{248B3A8B-6339-48D9-ABAD-1E100566F7B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9B80E217-5585-46A8-A07C-6E48C0A53159} = {B067EDDF-28A4-4FD5-B330-1D007E852B0F}
+		{248B3A8B-6339-48D9-ABAD-1E100566F7B8} = {5F377FD5-39C1-40F5-A5DD-F23390996BDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF79548B-2579-4A3E-88E0-5385D6A8D0EB}
