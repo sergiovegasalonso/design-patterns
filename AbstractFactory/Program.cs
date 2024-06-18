@@ -10,13 +10,13 @@ class Client
     public void Main()
     {
         // The client code can work with any concrete factory class.
-        ClientMethod(new BronzeAccountFactory());
+        ClientMethod(new BronzePlanFactory());
         Console.WriteLine();
 
-        ClientMethod(new SilverAccountFactory());
+        ClientMethod(new SilverPlanFactory());
         Console.WriteLine();
 
-        ClientMethod(new GoldAccountFactory());
+        ClientMethod(new GoldPlanFactory());
         Console.WriteLine();
     }
 

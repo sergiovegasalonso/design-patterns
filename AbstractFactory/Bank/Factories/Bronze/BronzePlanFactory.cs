@@ -4,20 +4,20 @@ using AbstractFactory.Bank.Products.DebitCard;
 
 namespace AbstractFactory.Bank.Factories;
 
-internal class GoldAccountFactory : IAbstractFactory
+internal class BronzePlanFactory : IAbstractFactory
 {
     public IAbstractAccount CreateAccount()
     {
-        return new GoldAccount();
+        return new BronzeAccount();
     }
 
     public IAbstractDebitCard CreateDebitCard()
     {
-        return new GoldDebitCard();
+        return new BronzeDebitCard();
     }
 
     public IAbstractCreditCard CreateCreditCard()
     {
-        return new GoldCreditCard();
+        return new BronzeCreditCard();
     }
 }
