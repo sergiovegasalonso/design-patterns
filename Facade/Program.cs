@@ -1,36 +1,45 @@
-﻿using System;
-
-namespace Facade;
+﻿namespace Facade;
 
 /*
  * Owner is the Facade class
  */
-internal class Contractor
+public class Contractor
 {
-    internal Contractor() { }
+    private readonly Carpenter _carpenter;
+    private readonly Painter _painter;
 
-    internal void PerformAlteration() { }
+    public Contractor()
+    {
+        _carpenter = new Carpenter();
+        _painter = new Painter();
+    }
+
+    public void PerformAlteration()
+    {
+        _carpenter.InstallDoor();
+        _carpenter.InstallWindow();
+        _painter.RemoveOldPaint();
+        _painter.ApplyPaint();
+    }
 }
 
 /*
  * Owner is the Director class
  */
-internal class Owner
+public class Owner
 {
     private readonly Bank _bank;
-
     private readonly Townhall _townhall;
-
     private readonly Contractor _contractor;
 
-    internal Owner()
+    public Owner()
     {
         _bank = new Bank();
         _townhall = new Townhall();
         _contractor = new Contractor();
     }
 
-    internal void PerformAlteration()
+    public void PerformAlteration()
     {
         _bank.ArrangeLoan();
         _townhall.ArrangeLicense();
@@ -38,43 +47,63 @@ internal class Owner
     }
 }
 
-internal class Townhall
+public class Townhall
 {
-    internal Townhall() { }
+    public Townhall() { }
 
-    internal void ArrangeLicense() { }
+    public void ArrangeLicense()
+    {
+        Console.WriteLine("License arranged!");
+    }
 }
 
-internal class Bank
+public class Bank
 {
-    internal Bank() { }
+    public Bank() { }
 
-    internal void ArrangeLoan() { }
+    public void ArrangeLoan()
+    {
+        Console.WriteLine("Loan arranged!");
+    }
 }
 
-internal class Carpenter
+public class Carpenter
 {
-    internal Carpenter() { }
+    public Carpenter() { }
 
-    internal void InstallWindow() { } 
+    public void InstallWindow()
+    {
+        Console.WriteLine("Window installed!");
+    }
 
-    internal void InstallDoor() { }
+    public void InstallDoor()
+    {
+        Console.WriteLine("Door installed!");
+    }
 }
 
-internal class Painter
+public class Painter
 {
-    internal Painter() { }
+    public Painter() { }
 
-    internal void RemoveOldPaint() { }
+    public void RemoveOldPaint()
+    {
 
-    internal void ApplyPaint() { }
+        Console.WriteLine("Old paint removed!");
+    }
+
+    public void ApplyPaint()
+    {
+        Console.WriteLine("New paint applied!");
+    }
 }
 
 class Program
 {
     static void Main(string[] args)
     {
-        
+        var owner = new Owner();
+        owner.PerformAlteration();
     }
 }
 
